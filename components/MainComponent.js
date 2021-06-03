@@ -19,7 +19,7 @@ class Main extends Component {
     }
 
     render() {
-        return 
+        return (
         <View style={{flex: 1}}>
         <MenuDirectory 
             recipes={this.state.recipes}
@@ -30,6 +30,7 @@ class Main extends Component {
                 />;
 
         </View>
+        );
     }
 }
 
