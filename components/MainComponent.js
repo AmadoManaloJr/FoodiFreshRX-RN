@@ -16,17 +16,18 @@ class Main extends Component {
     onRecipeSelect(recipeId) {
         this.setState({selectedrecipe: recipeId});
     }
-    
+
     render() {
         return (
         <View style={{flex: 1}}>
             <MenuDirectory 
                 recipes={this.state.recipes}
-                onPress={recipeId => this.onRecipeSelect(recipeId)} />;
+                onPress={recipeId => this.onRecipeSelect(recipeId)} 
+                />
             <RecipeInfo
                 recipe={this.state.recipes.filter(
                 recipe => recipe.id === this.state.selectedRecipe)[0]}
-            />;
+            />
         </View>
         );
     }
