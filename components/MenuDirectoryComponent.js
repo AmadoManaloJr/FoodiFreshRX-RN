@@ -9,7 +9,7 @@ function MenuDirectory(props) {
             <ListItem
                 title={item.name}
                 subtitle={item.description}
-                leftAvatar={{ source: require('./images/react-lake.jpg')}}
+              
             />
         );
     };
