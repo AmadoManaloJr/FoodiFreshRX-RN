@@ -18,8 +18,8 @@ function RenderRecipe({recipe}) {
     return <View />;
 }
 
-function CampsiteInfo(props) {
+function RecipeInfo(props) {
     return <RenderRecipe campsite={props.recipe} />;
 }
 
-export default CampsiteInfo;
+export default RecipeInfo;
