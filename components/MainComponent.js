@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MenuDirectory from './MenuDirectoryComponent';
-import { Recipes } from '../shared/Recipes';
+import { Recipes } from '../shared/recipes';
 
 class Main extends Component {
     constructor(props) {

@@ -23,4 +23,4 @@ function MenuDirectory(props) {
     );
 }
 
-export default Directory;
+export default MenuDirectory;
