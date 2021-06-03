@@ -4,27 +4,7 @@ import RecipeInfo from './RecipeInfoComponent';
 import { Text, View } from 'react-native';
 import { Card } from 'react-native-elements';
 import { Recipes } from '../shared/recipes';
-function RenderCampsite({campsite}) {
-    if (campsite) {
-        return (
-            <Card 
-                featuredTitle={campsite.name}
-                image={require('./images/react-lake.jpg')}
-            >
-                <Text style={{margin: 10}}>
-                    {campsite.description}
-                </Text>
-            </Card>
-        );
-    }
-    return <View />;
-}
 
-function CampsiteInfo(props) {
-    return <RenderCampsite campsite={props.campsite} />;
-}
-
-export default CampsiteInfo;
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -33,6 +13,7 @@ class Main extends Component {
             selectedRecipe: null
         };
     }
+    
     onRecipeSelect(recipeId) {
         this.setState({selectedrecipe: recipeId});
     }
@@ -42,11 +23,11 @@ class Main extends Component {
         <View style={{flex: 1}}>
         <MenuDirectory 
             recipes={this.state.recipes}
-            onPress={campsiteId => this.onCampsiteSelect(campsiteId)} />;
+            onPress={recipeId => this.onRecipeSelect(recipeId)} />;
         <RecipeInfo
                     recipe={this.state.recipes.filter(
-                        recipe => recipe.id === this.state.selectedRecipe)[0]}
-                />
+                    recipe => recipe.id === this.state.selectedRecipe)[0]}
+                />;
 
         </View>
     }
