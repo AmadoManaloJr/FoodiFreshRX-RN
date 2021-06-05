@@ -7,7 +7,7 @@ function RenderRecipe({recipe}) {
         return (
             <Card 
                 featuredTitle={recipe.name}
-                image={require('./images/react-lake.jpg')}
+                image={require('./images/hero-recipe-herb-roasted-chicken.jpeg')}
             >
                 <Text style={{margin: 10}}>
                     {recipe.description}
